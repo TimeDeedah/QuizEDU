@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using QuizEDU.Services;
 using UIKit;
+using Xamarin.Forms;
 
 namespace QuizEDU.iOS
 {
@@ -22,7 +24,12 @@ namespace QuizEDU.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
+            Forms.Init();
+
+            Firebase.Core.App.Configure();
+             
+            DependencyService.Register<IAuthService, IosAuthService>();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

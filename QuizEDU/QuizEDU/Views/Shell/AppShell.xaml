@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:login="clr-namespace:QuizEDU.Views.Login"
+    xmlns:home="clr-namespace:QuizEDU.Views"
+    x:Class="QuizEDU.Views.Shell.AppShell">
+
+        <FlyoutItem Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+        </FlyoutItem>
+
+        <MenuItem Text="Sign Out" Command="{Binding SignOutCommand}" />
+
+        <ShellContent Route="HomePage"
+                   ContentTemplate="{DataTemplate home:HomePage}" />
+
+        <ShellContent Route="SignInPage"
+                   Shell.FlyoutBehavior="Disabled"
+                   ContentTemplate="{DataTemplate login:SignInPage}" />
+
+        <ShellContent Route="SignUpPage"
+                  Shell.FlyoutBehavior="Disabled"
+                  ContentTemplate="{DataTemplate login:SignUpPage}" />
+
+</Shell>

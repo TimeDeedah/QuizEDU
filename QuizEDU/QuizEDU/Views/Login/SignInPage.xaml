@@ -3,10 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizEDU.Views.Login.SignInPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Placeholder="Email"/>
-            <Entry Placeholder="Password"/>
-            <Button Text="Sign in"/>
-        </StackLayout>
+        <StackLayout VerticalOptions="Center" Padding="20">
+
+            <Entry Placeholder="Email"
+                   Text="{Binding Email}"/>
+
+            <Entry Placeholder="Password"
+                   IsPassword="True"
+                   Text="{Binding Password}"/>
+
+            <Button Text="Sign in"
+                    Command="{Binding SignInCommand}" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+
+                <Label Text="Don't have an account. "
+                       HorizontalOptions="End"/>
+
+                <Button Text="Sign up"
+                        HorizontalOptions="End"
+                        Command="{Binding SignUpCommand}"/> 
+
+            </StackLayout>
+     </StackLayout>
     </ContentPage.Content>
 </ContentPage>

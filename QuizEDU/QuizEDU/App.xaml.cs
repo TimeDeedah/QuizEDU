@@ -1,8 +1,6 @@
-﻿using QuizEDU.Views;
-using QuizEDU.Views.Login;
-using System;
+﻿
+using QuizEDU.Views.Shell;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace QuizEDU
 {
@@ -12,7 +10,7 @@ namespace QuizEDU
         {
             InitializeComponent();
 
-            MainPage = new SignUpPage();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

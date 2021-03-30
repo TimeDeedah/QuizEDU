@@ -5,8 +5,9 @@ namespace QuizEDU.Services
 {
     public interface IAuthService
     {
-        Task<bool> SignInWithEmail(string email, string password);
-        bool SignOut();
         bool IsSignIn();
+        Task<bool> CreateUser(string email, string password);
+        void SignOut();
+        Task<string> SignIn(string email, string password);
     }
 }
