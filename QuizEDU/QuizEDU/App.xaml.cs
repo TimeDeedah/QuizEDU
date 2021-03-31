@@ -1,4 +1,5 @@
 ﻿
+using QuizEDU.Views.Login;
 using QuizEDU.Views.Shell;
 using Xamarin.Forms;
 

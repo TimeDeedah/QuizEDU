@@ -13,7 +13,7 @@ namespace QuizEDU.Views.Login
         public SignUpPage()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
+            this.BindingContext = new LoginViewModel();
         }
     }
 }

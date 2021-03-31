@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:login="clr-namespace:QuizEDU.Views.Login"
     xmlns:home="clr-namespace:QuizEDU.Views"
-    x:Class="QuizEDU.Views.Shell.AppShell">
+    x:Class="QuizEDU.Views.Shell.AppShell"
+    >
 
         <FlyoutItem Title="Home">
             <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
